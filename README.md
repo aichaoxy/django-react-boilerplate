@@ -1,7 +1,7 @@
 # django-react-boilerplate
 This a simple django-react fullstack boilerplate setup.
 
-# start with PDM(Python Libraries)
+# Start with PDM(Python Libraries)
 ```shell
 # Create project for the first time
 mkdir project_dir
@@ -14,7 +14,7 @@ pdm add django djangorestframework django-cors-headers
 pdm install
 ```
 
-# continue with Yarn(React Frontend)
+# Continue with Yarn(React Frontend)
 ```shell
 cd project_dir
 # Use `npm install yarn -g`, if yarn is not installed
@@ -23,7 +23,7 @@ cd frontend
 yarn add axios
 ```
 
-# continue with Django RestAPI setup
+# Continue with Django RestAPI setup
 ```shell
 cd project_dir
 
@@ -32,7 +32,7 @@ django-admin startproject config . # It's my habbit to use `config` directory fo
 ./manage.py startapp api           # api will be the only app in this django project 
 ```
 
-# now the Django settings
+# Now the Django settings
 ```shell
 INSTALLED_APPS = [
     # ...
@@ -54,7 +54,7 @@ MIDDLEWARE = [
 CORS_ORIGIN_ALLOW_ALL = True
 ```
 
-# create a simple GET view(Backend)
+# Create a simple GET view(Backend)
 ```shell
 # Add these in api/views.py
 # This code defines a new API endpoint that returns a JSON response with the message “Hello, world!”.
@@ -67,7 +67,7 @@ def hello_world(request):
     return Response({'message': 'Hello, world!'})
 ```
 
-# add urlpattern(Backend)
+# Add urlpattern(Backend)
 ```shell
 # Add these in config/urls.py
 from django.contrib import admin
@@ -91,15 +91,8 @@ urlpatterns = [
 # Create a new component in frontend/src (Frontend)
 # Render the new component in App.js (Frontend)
 
-# Run the project
-```shell
-# You need two terminals
+# Development
+See [HOWTO-Dev.md](./HOWTO-Dev.md)
 
-# Terminal 1  - start the Django development server.
-cd project_dir
-./manage.py runserver
-
-# Terminal 2 - start the React development server.
-cd project_dir/frontend
-yarn start
-```
+# Dockerize
+See [HOWTO-Dockerize.md](./HOWTO-Dockerize.md)
