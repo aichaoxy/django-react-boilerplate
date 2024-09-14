@@ -4,7 +4,10 @@ from django.shortcuts import render
 from django.shortcuts import render
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-
+from django.shortcuts import render
+from rest_framework import viewsets
+from .serializers import TodoSerializer
+from .models import Todo
 from datetime import datetime
 
 @api_view(['GET'])
@@ -20,3 +23,13 @@ def index(request):
 @api_view(['GET'])
 def hello_world(request):
     return Response({'message': 'Hello, world!'})
+
+class TodoView(viewsets.ModelViewSet):
+
+    # create a serializer class and 
+    # assign it to the TodoSerializer class
+    serializer_class = TodoSerializer
+
+    # define a variable and populate it 
+    # with the Todo list objects
+    queryset = Todo.objects.all()
