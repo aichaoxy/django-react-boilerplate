@@ -5,7 +5,7 @@
 groups = ["default"]
 strategy = ["inherit_metadata"]
 lock_version = "4.5.0"
-content_hash = "sha256:196e29dab73caa79993432eb0024611f4d6a495bc82782911ff3902bcb23e5be"
+content_hash = "sha256:e969d0cd2103525b39e38c328a3d297b1982af5bd9c2e7fcc862fd514185c5bc"
 
 [[metadata.targets]]
 requires_python = "==3.9.*"
@@ -54,6 +54,17 @@ dependencies = [
 files = [
     {file = "django_cors_headers-4.4.0-py3-none-any.whl", hash = "sha256:5c6e3b7fe870876a1efdfeb4f433782c3524078fa0dc9e0195f6706ce7a242f6"},
     {file = "django_cors_headers-4.4.0.tar.gz", hash = "sha256:92cf4633e22af67a230a1456cb1b7a02bb213d6536d2dcb2a4a24092ea9cebc2"},
+]
+
+[[package]]
+name = "django-split-settings"
+version = "1.3.2"
+requires_python = "<4.0,>=3.9"
+summary = "Organize Django settings into multiple files and directories. Easily override and modify settings. Use wildcards and optional settings files."
+groups = ["default"]
+files = [
+    {file = "django_split_settings-1.3.2-py3-none-any.whl", hash = "sha256:72bd7dd9f12602585681074d1f859643fb4f6b196b584688fab86bdd73a57dff"},
+    {file = "django_split_settings-1.3.2.tar.gz", hash = "sha256:d3975aa3601e37f65c59b9977b6bcb1de8bc27496930054078589c7d56998a9d"},
 ]
 
 [[package]]
